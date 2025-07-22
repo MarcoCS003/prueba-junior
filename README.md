@@ -1,154 +1,139 @@
-<div align="center">
-   <div >
-      <img style="background-color: #000; display: inline-block; padding: 10px; border-radius: 8px;" width="500" src="assets/logo.png" alt="Snowworm Logo">
-   </div>
-   <br>
-   <br>
-    <h1 width="200">Prueba Técnica - Desarrollador Junior</h1>
-   <p>La siguiente prueba evaluará tus habilidades técnicas en el desarrollo web con Laravel y Tailwind CSS.</p>
-   <br>
-</div>
+# Prueba Tecnica 
 
-## 🎯 Objetivo
+## FrameWorks
 
-Desarrollar una aplicación web para gestión de inventario que demuestre:
+| Framework | Versión | Comentarios |
+|-----------|---------|-------------|
+| **Laravel** | v11+ | Peticion de la prueba 
+| **React** | v18+ | He trabajado antes con React por lo que decidi usarlo| 
+| **Inertia.js** | Latest | |¿
 
-1. Capacidad para implementar funcionalidades básicas en Laravel
-2. Habilidad para crear interfaces responsivas con Tailwind CSS
-3. Comprensión de conceptos fundamentales de desarrollo web
-4. Aplicación de buenas prácticas de programación
 
 ---
 
-## 📋 Requisitos Técnicos
+## Herramientas Instaladas para el Entorno
 
-### 🔒 Módulo de Autenticación
-- [ ] Sistema de registro/login con validación
-- [ ] Protección de rutas para usuarios no autenticados
-- [ ] Perfil básico del usuario (nombre, email, fecha de registro)
-- [ ] Opción de cerrar sesión
-
-### 🛍️ Gestión de Categorías (CRUD Completo)
-- [ ] Creación de categorías con campos:
-  - Nombre (requerido, máximo 100 caracteres)
-  - Descripción (opcional, texto largo)
-  - Imagen (opcional, almacenamiento local)
-- [ ] Listado paginado con búsqueda (nombre/descripción)
-- [ ] Edición y eliminación de productos
-- [ ] Notificaciones visuales para acciones (éxito/error)
-
-### 🛍️ Gestión de Productos (CRUD Completo)
-- [ ] Creación de productos con campos:
-  - Nombre (requerido, máximo 100 caracteres)
-  - Descripción (opcional, texto largo)
-  - Precio (requerido, decimal positivo)
-  - Cantidad (requerido, entero no negativo)
-  - Categoría (seleccionar de la lista del CRUD anterior)
-  - Imagen (opcional, almacenamiento local)
-- [ ] Listado paginado con búsqueda (nombre/descripción)
-- [ ] Edición y eliminación de productos
-- [ ] Notificaciones visuales para acciones (éxito/error)
-
-### 🖥️ Interfaz de Usuario
-- [ ] Diseño responsivo con Tailwind CSS
-- [ ] Layout consistente con:
-  - Barra de navegación
-  - Área de contenido principal
-  - Mensajes de estado
-- [ ] Formularios con validación visual
-- [ ] Tabla de productos ordenable
+| Herramienta | Propósito | Comentarios |
+|-------------|-----------|-------------|
+| **Composer** | Gestor de paquetes PHP | |
+| **Laravel Breeze** | Autenticación + React setup | En mi investigacion la forma mas sencilla de hacer un login era implementado breeze |
+| **Node.js & NPM** | Runtime JavaScript | Nesarias para integrar React al proyecto |
+| **SQLite** | Base de datos local | Para pruebas utilize SQLite, en un produccion lo podria cambiar a mySQL o PostgreSQL|
 
 ---
 
-## ⚙️ Tecnologías Requeridas
+## IDE y Configuración
 
-| Área         | Tecnologías                                                                 |
-|--------------|-----------------------------------------------------------------------------|
-| Backend      | Laravel (actual), Eloquent ORM, Validación nativa                               |
-| Frontend     | Blade, Tailwind CSS (actual), Alpine.js (opcional)                               |
-| Base de Datos| MySQL 8+ o PostgreSQL                                                     |
-| Control Versión| Git, con commits descriptivos en inglés                                |
-
----
-
-## 📦 Entregables Obligatorios
-
-1. **Código Fuente** en repositorio Git con:
-   - Estructura limpia y organizada
-   - Migraciones y seeders para datos de prueba
-   - Configuración de entorno (.env.example)
-
-2. **Documentación** en README.md que incluya:
-   - Requisitos del sistema
-   - Instrucciones de instalación detalladas
-   - Explicación de decisiones técnicas relevantes
-   - Capturas de pantalla del funcionamiento
-
-3. **Demo Funcional**:
-   - Video corto (2-3 min) mostrando las funcionalidades
-   - O en su defecto, GIFs demostrativos
-
----
-
-## 📊 Criterios de Evaluación
+| Elemento | Descripción | 
+|----------|-------------|
+| **VS Code** | Editor principal |
 
 
+## Comandos de Ejecución
+
+| Comando | Terminal |
+|---------|----------|
+| `php artisan serve` |
+| `npm run dev` | Terminal 2 |
+| **URL:** `http://localhost:8000` | Navegador |
+
+# Proceso del desarrollo
+
+### **1. Investigación Previa (2 horas)**
+Realizé una investigación inicial sobre Laravel ya que no tenía mucha experiencia con PHP. Hice comparaciones con frameworks que ya conocía para backend como **Ktor con Kotlin**. Investigué la integración de React con Laravel, dado que tenía experiencia previa con este framework de frontend.
+
+**Decisión:** Por la facilidad de integración entre Laravel y React, decidí crear un proyecto utilizando estos dos frameworks, integrando **Laravel Breeze** para el sistema de autenticación.
+
+### **2. Análisis de Requerimientos**
+Analicé detalladamente los requerimientos de la prueba técnica y diseñé con **Miro** el concepto de una página de hardware de computadora para contextualizar el inventario.
 
 
-| Categoría          | Peso  | Detalles                                                                 |
-|--------------------|-------|--------------------------------------------------------------------------|
-| **Funcionalidad**  | 40%   | Compleción de requisitos, correcto funcionamiento                        |                       |
-| **Calidad Código** | 30%   | Estándares, mantenibilidad, eficiencia                                  |
-| **UI/UX**        | 20%   | Diseño consistente y profesional, experiencia de usuario intuitiva                            |
-| **Documentación**  | 10%   | Claridad, completitud, decisiones justificadas    
+![Diseño con Miro](diseño.jpg)
+
+### **3. Preparación del Entorno**
+- Configuré **VS Code** como IDE principal
+- Instalé herramientas necesarias: **PHP**, **Composer**, **Node.js**, **NPM**
+- Creé el proyecto Laravel e integré React junto con Breeze
 
 ---
 
-## ⏱️ Tiempo y Entrega
+## **Backend - Laravel (2 horas)**
 
-- **Duración estimada:** 6-8 horas
-- **Plazo de entrega:** 3 días hábiles desde asignación
-- **Formato de entrega:**
-  1. Fork del repositorio base
-  2. Desarrollo en branch con tu nombre (ej. `john-doe`)
-  3. Pull Request al repositorio original
-  4. Incluir en descripción del PR:
-     - Tiempo invertido
-     - Dificultades encontradas
-     - Features extras implementadas
+### Archivos Creados/Modificados
 
----
+| Tipo | Archivo | Ruta | Propósito |
+|------|---------|------|-----------|
+| **Migration** | `create_categories_table.php` | `database/migrations/` | Estructura tabla categorías |
+| **Migration** | `create_products_table.php` | `database/migrations/` | Estructura tabla productos |
+| **Model** | `Category.php` | `app/Models/` | Modelo Eloquent categorías |
+| **Model** | `Product.php` | `app/Models/` | Modelo Eloquent productos |
+| **Controller** | `CategoryController.php` | `app/Http/Controllers/` | CRUD categorías |
+| **Controller** | `ProductController.php` | `app/Http/Controllers/` | CRUD productos |
+| **Controller** | `DashboardController.php` | `app/Http/Controllers/` | Catálogo principal |
+| **Seeder** | `CategorySeeder.php` | `database/seeders/` | Datos de prueba categorías |
+| **Seeder** | `ProductSeeder.php` | `database/seeders/` | Datos de prueba productos |
+| **Routes** | `web.php` | `routes/` | Rutas de la aplicación |
 
-## ✨ Elementos Diferenciadores (Opcionales)
+### Rutas Implementadas
 
-Estos elementos no son obligatorios pero sumarán puntos:
+| Método | Ruta | Controlador | Acción |
+|--------|------|-------------|---------|
+| GET | `/dashboard` | `DashboardController@index` | Catálogo principal |
+| GET | `/categories` | `CategoryController@index` | Lista categorías |
+| GET | `/categories/create` | `CategoryController@create` | Formulario crear |
+| POST | `/categories` | `CategoryController@store` | Guardar categoría |
+| GET | `/categories/{id}/edit` | `CategoryController@edit` | Formulario editar |
+| PUT | `/categories/{id}` | `CategoryController@update` | Actualizar categoría |
+| DELETE | `/categories/{id}` | `CategoryController@destroy` | Eliminar categoría |
+| GET | `/products` | `ProductController@index` | Lista productos |
+| GET | `/products/create` | `ProductController@create` | Formulario crear |
+| POST | `/products` | `ProductController@store` | Guardar producto |
+| GET | `/products/{id}/edit` | `ProductController@edit` | Formulario editar |
+| PUT | `/products/{id}` | `ProductController@update` | Actualizar producto |
+| DELETE | `/products/{id}` | `ProductController@destroy` | Eliminar producto |
 
-- Implementación de tests básicos (Feature o Unit)
-- Uso de componentes Livewire
-- Sistema de categorías anidadas
-- Exportación de productos a CSV/Excel
-- Gráficos simples de inventario (usando Chart.js)
-- Despliegue en servicio free (Heroku, Railway, etc.)
-
----
-
-## ❓ Preguntas Frecuentes
-
-**¿Puedo usar librerías adicionales?**  
-No, solo se permite utilizar las herramientas que proporcionar el framework por defecto, esto para fines de evaluación.
-
-**¿Debo implementar todos los extras?**  
-No, con los requisitos básicos es suficiente para aprobar.
-
-**¿Qué versión de Laravel debo usar?**  
-La última estable al momento de realizar la prueba.
+**Comentario:** No había utilizado Laravel anteriormente, tuve algunos problemas iniciales con la sintaxis de PHP, pero resultó muy cómodo y práctico para desarrollar el backend.
 
 ---
 
-## 📌 Notas Finales
+##  **Frontend - React (3 horas)**
 
-- Se valorará más código limpio y funcional que features complejas
-- El diseño debe ser profesional pero no requiere ser elaborado
-- Ante dudas, tomar decisiones razonables y documentarlas
+### Archivos Creados/Modificados
 
-¡Buena suerte! 🚀
+| Tipo | Archivo | Ruta | Propósito |
+|------|---------|------|-----------|
+| **Layout** | `AuthenticatedLayout.jsx` | `resources/js/Layouts/` | Barra navegación principal |
+| **Component** | `DeleteConfirmModal.jsx` | `resources/js/Components/` | Modal reutilizable confirmación |
+| **Page** | `Dashboard.jsx` | `resources/js/Pages/` | Catálogo de productos |
+| **Page** | `Index.jsx` | `resources/js/Pages/Categories/` | Lista de categorías |
+| **Page** | `Create.jsx` | `resources/js/Pages/Categories/` | Crear categoría |
+| **Page** | `Edit.jsx` | `resources/js/Pages/Categories/` | Editar categoría |
+| **Page** | `Index.jsx` | `resources/js/Pages/Products/` | Lista de productos |
+| **Page** | `Create.jsx` | `resources/js/Pages/Products/` | Crear producto |
+| **Page** | `Edit.jsx` | `resources/js/Pages/Products/` | Editar producto |
+| **Config** | `app.jsx` | `resources/js/` | Configuración principal React |
+
+
+##  **Tiempo Invertido (17-18 Julio 2025)**
+
+| Fase | Tiempo | Detalles |
+|------|--------|----------|
+| **Requerimientos + Investigación** | 2 horas | Laravel research, React integration, Breeze setup |
+| **Backend Development** | 2 horas | Models, migrations, controllers, seeders, routes |
+| **Frontend Development** | 3 horas | React components, pages, layouts, styling |
+| **Documentación** | 1 hora | README, capturas, video demo |
+| **TOTAL** | **8 horas** | Tiempo efectivo de desarrollo |
+
+---
+
+## **Puntos a Mejorar**
+
+
+-  Buscador en productos: El filtro por categorías en la búsqueda aún no está completamente integrado
+- Upload de imágenes: Sistema de subida de archivos no implementado completamente
+- Git: Crear branches específicos y commits más descriptivos
+
+
+## URL youtube
+
+https://youtu.be/RNnoCWq3MMI
